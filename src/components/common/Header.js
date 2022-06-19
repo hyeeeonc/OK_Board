@@ -68,8 +68,8 @@ const Header = () => {
               <div className="sub-menu-4">
                 <a href="https://okraseoul.com/okra.html">OKRA</a>
                 <a href="https://okraseoul.com/business.html">Business</a>
-                <a href="https://okraseoul.com/partners.html">Partners</a>
-                <a href="https://okraseoul.com">Contact Us</a>
+                <a href="https://okraseoul.com/partner.html">Partners</a>
+                <a href="https://okraseoul.com?section=contact">Contact Us</a>
               </div>
             </div>
 
