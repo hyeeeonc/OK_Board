@@ -28,8 +28,7 @@ const ErrorBlock = styled.div`
 
     .logof {
       font-weight: 900;
-      text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
-        1px 1px 0 #fff;
+      text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
     }
 
     .logob {
@@ -49,6 +48,24 @@ const PostItemBlock = styled.div`
   margin-left: 47.5px;
   display: hidden;
 
+  @media (max-width: 1320px) {
+    margin: 0 53.16px;
+  }
+
+  @media (max-width: 1024px) {
+    margin: 0 74.5px;
+  }
+
+  @media (max-width: 767px) {
+    width: 200px;
+    margin: 0 calc((100vw - 400px) / 4);
+  }
+
+  @media (max-width: 500px) {
+    width: 200px;
+    margin: 0 calc((100vw - 200px) / 2);
+  }
+
   @media (max-width: 350px) {
     max-width: 100%;
   }
@@ -57,6 +74,10 @@ const PostItemBlock = styled.div`
     text-align: center;
     img {
       max-width: 100%;
+    }
+    @media (max-width: 767px) {
+      max-width: 200px;
+      margin: 0 auto;
     }
   }
 
@@ -78,17 +99,7 @@ const PostItemBlock = styled.div`
 `;
 
 const PostItem = ({ post }) => {
-  const {
-    postId,
-    boardId,
-    title,
-    thumbnail,
-    content,
-    addedDate,
-    status,
-    selected,
-    views,
-  } = post;
+  const { postId, boardId, title, thumbnail, content, addedDate, status, selected, views } = post;
 
   let events;
 
@@ -110,10 +121,7 @@ const PostItem = ({ post }) => {
   return (
     <PostItemBlock>
       <Link to={`/${postId}`}>
-        <div
-          className="thumbnail"
-          dangerouslySetInnerHTML={{ __html: thumbnail }}
-        ></div>
+        <div className="thumbnail" dangerouslySetInnerHTML={{ __html: thumbnail }}></div>
       </Link>
       <h6>{events}</h6>
 

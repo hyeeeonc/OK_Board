@@ -16,6 +16,10 @@ const PaginationButton = styled(Button)`
     background-color: inherit;
     color: #999999;
   }
+
+  @media (max-width: 500px) {
+    font-size: 1rem;
+  }
 `;
 const PaginationBlock = styled.div`
   width: 320px;
@@ -32,6 +36,16 @@ const PageNumber = styled.div`
   text-align: center;
   min-width: 20rem;
   letter-spacing: 1rem;
+
+  @media (max-width: 767px) {
+    min-width: 15rem;
+  }
+
+  @media (max-width: 500px) {
+    min-width: 8rem;
+    font-size: 1rem;
+    letter-spacing: 0.5rem;
+  }
 `;
 
 // const PageInput = styled.input`
@@ -47,17 +61,11 @@ const buildLink = ({ page }) => {
 const Pagination = ({ page, lastPage }) => {
   return (
     <PaginationBlock>
-      <PaginationButton
-        disabled={page === 1}
-        to={page === 1 ? undefined : buildLink({ page: page - 1 })}
-      >
+      <PaginationButton disabled={page === 1} to={page === 1 ? undefined : buildLink({ page: page - 1 })}>
         &lt;Down
       </PaginationButton>
       <PageNumber>{page + " | " + lastPage}</PageNumber>
-      <PaginationButton
-        disabled={page === lastPage}
-        to={page === lastPage ? undefined : buildLink({ page: page + 1 })}
-      >
+      <PaginationButton disabled={page === lastPage} to={page === lastPage ? undefined : buildLink({ page: page + 1 })}>
         Up&gt;
       </PaginationButton>
     </PaginationBlock>

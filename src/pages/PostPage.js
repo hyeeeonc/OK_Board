@@ -9,7 +9,6 @@ const Spacer = styled.div`
 const PostPage = () => {
   return (
     <>
-      <HeaderContainer />
       <MainResponsive>
         <Spacer />
         <PostViewerContainer />
