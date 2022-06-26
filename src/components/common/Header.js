@@ -27,21 +27,18 @@ const Header = () => {
         {/* Nav */}
         <nav className="nav">
           <div className="nav-links">
-            <Link to="/main" className="logo">
+            <a href="https://okraseoul.com" className="logo">
               <img width="30rem" src="./assets/mainLogo.png" alt="OKRA SEOUL" />
-            </Link>
+            </a>
             <div className="sub-selector">
               <div className="main-menu mm-0">
-                <a href="#">We Are OKRA</a>
+                <a>We Are OKRA</a>
               </div>
               <div className="sub-menu-4">
-                <Link to="/okra">OKRA</Link>
-                <Link to="/business">Business</Link>
-                <Link to="/partners">Partners</Link>
-                <a href="#">
-                  {/* javascript:void(0)" onClick="scrollToContact()"> */}
-                  Contact Us
-                </a>
+                <a href="https://okraseoul.com/okra.html">OKRA</a>
+                <a href="https://okraseoul.com/business.html">Business</a>
+                <a href="https://okraseoul.com/partner.html">Partners</a>
+                <a href="https://okraseoul.com/index.html?section=contact">Contact Us</a>
               </div>
             </div>
             <div className="sub-selector">
@@ -77,6 +74,8 @@ const Header = () => {
               <div className="menu">
                 <div style={{ width: 545 }}>
                   <div className="hamburger-button">
+                    <input className="hamburger-play" type="image" src="./assets/play.png" onClick="audio.play();" defaultValue="play" />
+                    <input className="hamburger-pause" type="image" src="./assets/stop.png" onClick="audio.pause();" defaultValue="pause" />
                     <div className="hamburger-sns">
                       <img src="./assets/youtube.png" alt="youtube" />
                       <img src="./assets/fb.png" alt="Facebook" />
@@ -88,16 +87,16 @@ const Header = () => {
                       We Are OKRA
                       <ul className="hamburger-main-menu">
                         <li>
-                          <Link to="/okra">OKRA</Link>
+                          <a href="https://okraseoul.com/okra.html">OKRA</a>
                         </li>
                         <li>
-                          <a href="./business.html">Business</a>
+                          <a href="https://okraseoul.com/business.html">Business</a>
                         </li>
                         <li>
-                          <a href="./partner.html">Partners</a>
+                          <a href="https://okraseoul.com/partner.html">Partners</a>
                         </li>
                         <li>
-                          <a href="./contact.html">Contact Us</a>
+                          <a href="https://okraseoul.com/contact.html">Contact Us</a>
                         </li>
                       </ul>
                     </li>
