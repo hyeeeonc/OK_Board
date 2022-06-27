@@ -62,13 +62,15 @@ const PostItemBlock = styled.div`
   }
 
   @media (max-width: 500px) {
+    width: 150px;
+    margin: 0 calc((100vw - 300px) / 4);
+  }
+
+  @media (max-width: 319px) {
     width: 200px;
     margin: 0 calc((100vw - 200px) / 2);
   }
 
-  @media (max-width: 350px) {
-    max-width: 100%;
-  }
   .thumbnail {
     max-width: 235px;
     text-align: center;
@@ -79,12 +81,30 @@ const PostItemBlock = styled.div`
       max-width: 200px;
       margin: 0 auto;
     }
+
+    @media (max-width: 500px) {
+      max-width: 150px;
+    }
+
+    @media (max-width: 319px) {
+      max-width: 200px;
+    }
+
   }
 
   h6 {
     font-size: 1rem;
     color: #af8bea;
     margin: 1.4rem 0 1.4rem 0;
+
+    @media (max-width: 767px) {
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 500px) {
+      0.6rem;
+    }
+
   }
 
   h2 {
@@ -92,6 +112,16 @@ const PostItemBlock = styled.div`
     margin-bottom: 0;
     margin-top: 0;
     color: white;
+
+        @media (max-width: 767px) {
+      font-size: 1.6rem;
+    }
+
+    @media (max-width: 500px) {
+      1rem;
+    }
+
+
     &: hoaver {
       color: ${palette.gray[6]};
     }
