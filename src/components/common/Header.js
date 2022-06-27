@@ -74,8 +74,6 @@ const Header = () => {
               <div className="menu">
                 <div style={{ width: 545 }}>
                   <div className="hamburger-button">
-                    <input className="hamburger-play" type="image" src="./assets/play.png" onClick="audio.play();" defaultValue="play" />
-                    <input className="hamburger-pause" type="image" src="./assets/stop.png" onClick="audio.pause();" defaultValue="pause" />
                     <div className="hamburger-sns">
                       <img src="./assets/youtube.png" alt="youtube" />
                       <img src="./assets/fb.png" alt="Facebook" />
